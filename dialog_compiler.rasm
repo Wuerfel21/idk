@@ -22,5 +22,6 @@
 Dir["./game/dialog/*.rasm"].sort!.each do |file|
     section anon!(file) do
         loadin file
+		# Add some random BS
     end
 end

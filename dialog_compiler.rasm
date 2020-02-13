@@ -1,0 +1,26 @@
+# encoding: utf-8
+# frozen_string_literal: true
+#              IRQsome Software's
+# ____                          ______       __             
+#/\  _`\                       /\  _  \     /\ \            
+#\ \ \L\ \ _ __   ___    _____ \ \ \L\ \    \_\ \   __  __  
+# \ \ ,__//\`'__\/ __`\ /\ '__`\\ \  __ \   /'_` \ /\ \/\ \ 
+#  \ \ \/ \ \ \//\ \L\ \\ \ \L\ \\ \ \/\ \ /\ \L\ \\ \ \_/ |
+#   \ \_\  \ \_\\ \____/ \ \ ,__/ \ \_\ \_\\ \___,_\\ \___/ 
+#    \/_/   \/_/ \/___/   \ \ \/   \/_/\/_/ \/__,_ / \/__/  
+#                          \ \_\                            
+#                           \/_/                            
+#               (working title)
+#
+# (C) IRQsome Software 2020
+# All rights reserved. Do not distribute.
+#
+# Just run all dialog files
+#
+
+
+Dir["./game/dialog/*.rasm"].sort!.each do |file|
+    section anon!(file) do
+        loadin file
+    end
+end
